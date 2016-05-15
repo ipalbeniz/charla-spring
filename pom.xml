@@ -22,6 +22,7 @@
         <module>05-example-spring-java-component-scan</module>
         <module>06-example-spring-java-properties</module>
         <module>07-example-spring-java-profiles-mongo</module>
+        <module>08-example-spring-java-mvc</module>
     </modules>
 
     <build>

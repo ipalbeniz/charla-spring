@@ -7,6 +7,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 
 @Repository
@@ -22,5 +24,10 @@ public class ProgrammerDaoMongo implements ProgrammerDao {
         Query query = new Query(where("username").is(id));
 
         return mongoTemplate.findOne(query, Programmer.class, "programmers");
+    }
+
+    @Override
+    public List<Programmer> getAll() {
+        return mongoTemplate.findAll(Programmer.class, "programmers");
     }
 }
