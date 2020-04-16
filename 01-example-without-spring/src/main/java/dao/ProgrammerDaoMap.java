@@ -13,7 +13,7 @@ public class ProgrammerDaoMap implements ProgrammerDao {
     private static Map<String, Programmer> programmersById = new HashMap<String, Programmer>();
 
     static {
-        Programmer programmer = new Programmer("iperez", "Iñaki", 34);
+        Programmer programmer = new Programmer("iperez", "Iñaki", 38);
         programmersById.put(programmer.getId(), programmer);
 
         programmer = new Programmer("lcroft", "Lara Croft", 27);

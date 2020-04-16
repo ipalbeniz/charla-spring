@@ -10,8 +10,8 @@ public class DemoApp {
         ProgrammerDao programmerDao = new ProgrammerDaoMap();
         ProgrammerService programmerService = new ProgrammerServiceImpl(programmerDao);
 
-        System.out.println(String.format("%s loves %s",
+        System.out.printf("%s loves %s",
                 programmerService.getById("lcroft").getName(),
-                programmerService.getById("iperez").getName()));
+                programmerService.getById("iperez").getName());
     }
 }

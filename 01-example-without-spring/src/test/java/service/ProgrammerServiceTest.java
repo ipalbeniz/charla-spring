@@ -7,13 +7,13 @@ import org.junit.Test;
 public class ProgrammerServiceTest {
 
     @Test
-    public void testGetById() {
+    public void it_should_get_a_programmer_by_id() {
 
         ProgrammerService programmerService = new ProgrammerServiceImpl();
 
         Programmer programmer = programmerService.getById("iperez");
 
-        Assert.assertEquals("iperez", programmer.getId());
+        Assert.assertEquals("Iñaki", programmer.getName());
     }
 
 }

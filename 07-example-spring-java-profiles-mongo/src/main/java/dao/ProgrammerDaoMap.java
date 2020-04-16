@@ -22,6 +22,7 @@ public class ProgrammerDaoMap implements ProgrammerDao {
 
     @PostConstruct
     public void postConstruct() {
+
         Programmer programmer = new Programmer("iperez", "Íñigo Montoya", 45);
         programmersById.put(programmer.getUsername(), programmer);
 
