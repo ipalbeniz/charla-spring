@@ -23,6 +23,7 @@
         <module>06-example-spring-java-properties</module>
         <module>07-example-spring-java-profiles-mongo</module>
         <module>08-example-spring-java-mvc</module>
+        <module>09-example-spring-boot</module>
     </modules>
 
     <build>
