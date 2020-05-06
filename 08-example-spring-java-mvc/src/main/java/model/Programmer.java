@@ -1,5 +1,6 @@
 package model;
 
+import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -12,14 +13,20 @@ public class Programmer {
     private String username;
     private String name;
     private int age;
+    private List<String> languages;
 
     public Programmer() {
     }
 
     public Programmer(String username, String name, int age) {
+        this(username, name, age, null);
+    }
+
+    public Programmer(String username, String name, int age, List<String> languages) {
         this.username = username;
         this.name = name;
         this.age = age;
+        this.languages = languages;
     }
 
     @Override
@@ -77,5 +84,13 @@ public class Programmer {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public List<String> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(List<String> languages) {
+        this.languages = languages;
     }
 }

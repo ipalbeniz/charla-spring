@@ -1,17 +1,15 @@
 package service;
 
 import dao.ProgrammerDao;
-import dao.ProgrammerDaoMap;
+import java.util.List;
 import model.Programmer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
-@Service("programmerService")
+@Service
 public class ProgrammerServiceImpl implements ProgrammerService {
 
-    private ProgrammerDao programmerDao = new ProgrammerDaoMap();
+    private final ProgrammerDao programmerDao;
 
     @Autowired
     public ProgrammerServiceImpl(ProgrammerDao programmerDao) {
