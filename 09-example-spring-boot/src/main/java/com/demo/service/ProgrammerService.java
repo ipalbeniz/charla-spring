@@ -6,7 +6,11 @@ import java.util.List;
 
 public interface ProgrammerService {
 
-    Programmer getByUsername(String id);
+	Programmer getByUsername(String id);
 
-    List<Programmer> getAll();
+	List<Programmer> getAll();
+
+	void save(Programmer programmer);
+
+	void batchJob();
 }
