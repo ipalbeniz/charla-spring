@@ -4,6 +4,7 @@ import com.demo.model.Programmer;
 import com.demo.service.ProgrammerService;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,5 +38,11 @@ public class ProgrammerController {
 	public void createProgrammer(@RequestBody final Programmer programmer) {
 
 		this.programmerService.save(programmer);
+	}
+
+	@DeleteMapping("/{username}")
+	public void deleteByUsername(@PathVariable(value = "username") final String username) {
+		
+		this.programmerService.deleteByUsername(username);
 	}
 }

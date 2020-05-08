@@ -10,7 +10,9 @@ public interface ProgrammerService {
 
 	List<Programmer> getAll();
 
-	void save(Programmer programmer);
+	Programmer save(Programmer programmer);
+
+	void deleteByUsername(final String username);
 
 	void batchJob();
 }
